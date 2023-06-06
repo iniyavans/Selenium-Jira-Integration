@@ -45,7 +45,7 @@ Let’s create a package inside the main folder com.util, which will contain two
 
 Create a new interface under the com.util and name the class as a "jiraPolicy"
 
-```bash
+```java
 @Retention(RetentionPolicy.RUNTIME)
 public @interface jiraPolicy {
 	
@@ -54,10 +54,21 @@ public @interface jiraPolicy {
 }
 ```
 
-After that we need to give the jira policy's logTicket funtion as True. 
+After that we need to give the jira policy's logTicket funtion as True with the test annotation.
 
 ```java
 @jiraPolicy(logTicket = true)
+```
+
+Change the above test annotation like below
+
+```java
+	@Test(priority = 1) @jiraPolicy(logTicket = true)
+	public static void test() {
+	
+	// wirte a test here
+	
+	}
 ```
 
 If the Test anootation get false, the run time interface automatically called.
