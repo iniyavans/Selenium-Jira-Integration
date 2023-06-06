@@ -27,11 +27,11 @@ public class JiraServiceProvider {
 		try {
 
 			FluentCreate fluentCreate = jira.createIssue(projectName, issueType);
-			
+
 			fluentCreate.field(Field.SUMMARY, summary);
-			
+
 			fluentCreate.field(Field.DESCRIPTION, description);
-			
+
 			fluentCreate.execute();
 
 		} catch (JiraException e) {
