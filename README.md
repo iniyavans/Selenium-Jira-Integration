@@ -25,11 +25,7 @@ Create a new package under the src/test/java and create a test class(testNG) und
 	@Test(priority = 1)
 	public static void test() {
 
-		String actualResult = driver.getCurrentUrl();
-
-		String expectedResult = "https://opensea.io/";
-
-		Assert.assertEquals(actualResult, expectedResult);
+	// wirte a test here
 
 	}
 ```
